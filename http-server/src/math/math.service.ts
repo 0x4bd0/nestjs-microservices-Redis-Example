@@ -10,11 +10,10 @@ export class MathService {
     
     constructor() {
         this.client = ClientProxyFactory.create({
-            transport: Transport.TCP,
-            options: {
-                host: '127.0.0.1',
-                port: 8123
-            }
+                    transport: Transport.REDIS,
+                    options: {
+                    url : 'redis://localhost:6379'
+                    }
         })
     }
 
